@@ -1,0 +1,414 @@
+<!-- 留言板 -->
+<html><head>
+    <title>我的记录</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="description" content="学习记录">
+    <meta name="keywords" content="我的留言">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <link rel="icon" href="images/1000.jpg">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css">    
+    
+    <style>
+      
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px #000;
+        }
+@-webkit-keyframes snowflakes-fall {
+            0% {
+                top:-10%
+            }
+            100% {
+                top:100%
+            }
+        }
+@-webkit-keyframes snowflakes-shake {
+            0%, 100% {
+                -webkit-transform:translateX(0);
+                transform:translateX(0)
+            }
+            50% {
+                -webkit-transform:translateX(80px);
+                transform:translateX(80px)
+            }
+        }
+@keyframes snowflakes-fall {
+            0% {
+                top:-10%
+            }
+            100% {
+                top:100%
+            }
+        }
+@keyframes snowflakes-shake {
+            0%, 100% {
+                transform:translateX(0)
+            }
+            50% {
+                transform:translateX(80px)
+            }
+        }
+        .snowflake {
+            position:fixed;
+            top:-10%;
+            z-index:9999;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+           
+            -webkit-animation-name:snowflakes-fall, snowflakes-shake;
+            -webkit-animation-duration:10s;
+            -webkit-animation-timing-function:linear, ease-in-out;
+            -webkit-animation-iteration-count:infinite, infinite;
+            -webkit-animation-play-state:running, running;
+            animation-name:snowflakes-fall, snowflakes-shake;
+            animation-duration:10s;
+            animation-timing-function:linear, ease-in-out;
+            animation-iteration-count:infinite, infinite;
+            animation-play-state:running, running
+        }
+        .snowflake:nth-of-type(0) {
+            left:1%;
+            -webkit-animation-delay:0s, 0s;
+            animation-delay:0s, 0s
+        }
+        .snowflake:nth-of-type(1) {
+            left:10%;
+            -webkit-animation-delay:1s, 1s;
+            animation-delay:1s, 1s
+        }
+        .snowflake:nth-of-type(2) {
+            left:20%;
+            -webkit-animation-delay:6s, .5s;
+            animation-delay:6s, .5s
+        }
+        .snowflake:nth-of-type(3) {
+            left:30%;
+            -webkit-animation-delay:4s, 2s;
+            animation-delay:4s, 2s
+        }
+        .snowflake:nth-of-type(4) {
+            left:40%;
+            -webkit-animation-delay:2s, 2s;
+            animation-delay:2s, 2s
+        }
+        .snowflake:nth-of-type(5) {
+            left:50%;
+            -webkit-animation-delay:8s, 3s;
+            animation-delay:8s, 3s
+        }
+        .snowflake:nth-of-type(6) {
+            left:60%;
+            -webkit-animation-delay:6s, 2s;
+            animation-delay:6s, 2s
+        }
+        .snowflake:nth-of-type(7) {
+            left:70%;
+            -webkit-animation-delay:2.5s, 1s;
+            animation-delay:2.5s, 1s
+        }
+        .snowflake:nth-of-type(8) {
+            left:80%;
+            -webkit-animation-delay:1s, 0s;
+            animation-delay:1s, 0s
+        }
+        .snowflake:nth-of-type(9) {
+            left:90%;
+            -webkit-animation-delay:3s, 1.5s;
+            animation-delay:3s, 1.5s
+        }
+        .snowflake:nth-of-type(10) {
+            left:25%;
+            -webkit-animation-delay:2s, 0s;
+            animation-delay:2s, 0s
+        }
+        .snowflake:nth-of-type(11) {
+            left:65%;
+            -webkit-animation-delay:4s, 2.5s;
+            animation-delay:4s, 2.5s
+        }
+
+    </style>
+</head>
+    <body class="mdui-theme-primary-blue mdui-theme-accent-blue"
+     background="images/3.jpg" 
+     
+     style="background-repeat: no-repeat; background-size: cover; transform: translateX(50px);">
+
+     <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            2021
+        </div>
+        <div class="snowflake">
+            二次元
+        </div>
+        <div class="snowflake">
+            动漫
+        </div>
+        <div class="snowflake">
+            努力
+        </div>
+        <div class="snowflake">
+            奋斗
+        </div>
+        <div class="snowflake">
+            代码人
+        </div>
+        <div class="snowflake">
+            灰渡
+        </div>
+        <div class="snowflake">
+            小云朵
+        </div>
+        <div class="snowflake">
+            阿巴
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            
+        </div>
+        <div class="snowflake">
+            
+        </div>
+        <div class="snowflake">
+           
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ¥
+        </div>
+        <div class="snowflake">
+            $
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+        <div class="snowflake">
+            ❅
+        </div>
+        <div class="snowflake">
+            ❆
+        </div>
+    </div>
+    
+    <div style="Height:30px"></div>
+    
+        <div class="mdui-container" style="max-width: 800px;">
+            <div class="mdui-card" style="border-radius: 16px; opacity: 0.7;">
+                <div class="mdui-card-menu">
+                    <button onclick="window.location.href='index.html'" class="mdui-btn mdui-btn-icon mdui-text-color-grey">
+                        <i class="mdui-icon material-icons">home</i>
+                    </button>
+                </div>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">
+                        每日记录
+                    </div>
+                    <div class="mdui-card-primary-subtitle">
+                     Leave a Message 
+                    </div>
+                </div>
+                <div class="mdui-card-content">
+                    <h2 style="font-weight: 400;line-height:30px">秒速五厘米，是樱飘落的速度。
+                        <br>那么怎样的速度，才能走完你我之间的距离。</h2>
+                    
+                    <div class="mdui-textfield mdui-textfield-not-empty mdui-textfield-has-bottom">
+                        <textarea class="mdui-textfield-input" rows="2"
+                         id="comment" placeholder="">因为喜欢，所以才会去奋斗。</textarea>
+                        <div class="mdui-textfield-helper">
+                            我的留言
+                        </div>
+                    </div>
+                    <div class="mdui-textfield mdui-textfield-not-empty mdui-textfield-has-bottom">
+                        <textarea class="mdui-textfield-input" rows="2"
+                         id="comment" placeholder="">如果每个人都能为自己所爱的事情付诸努力，那么崭新的地方定是梦想的终点。</textarea>
+                        <div class="mdui-textfield-helper">
+                            我的留言
+                        </div>
+                    </div>
+                </div>
+               
+            
+              <div class="mdui-card-actions">
+                    <button id="button" onclick="go()"
+                     class="mdui-btn mdui-ripple mdui-float-right" 
+                     style="border-radius: 16px;background-color:#a7a7f1;color:#FFFFFF;">留言</button>
+                </div>
+            </div>
+        </div>
+        <div style="Height:20px"></div>
+        <div class="mdui-container" style="max-width: 800px;">
+            <div class="mdui-card" style="border-radius: 16px; opacity: 0.7;">
+                <div class="mdui-card-menu">
+                </div>
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">
+                        
+                       我喜欢的动漫
+                        
+                    </div>
+                    <div class="mdui-card-primary-subtitle "
+                     style="Height:0px">
+                      My favourite
+                    </div>
+                    
+                </div>
+                <div class="mdui-card-content ">
+                    <ul class="mdui-list">
+                          <li class="mdui-list-item mdui-ripple">
+                                            <div class="mdui-list-item-content">
+ <div class="mdui-list-item-title"><a href="https://anime-86.com/movie/" target="_blank">86-不存在的战区</a></div>
+ <div class="mdui-list-item-text mdui-list-item-one-line">今天 | 2022-11-22 21:51:18</div>
+   </div>
+  </li> 
+   <li class="mdui-list-item mdui-ripple">
+     <div class="mdui-list-item-content">
+     <div class="mdui-list-item-title"><a href="#" target="_blank">秒速五厘米</a> </div>
+     <div class="mdui-list-item-text mdui-list-item-one-line">今天| 2022-011-20 21:49:31</div>
+    </div>
+ </li>
+  <li class="mdui-list-item mdui-ripple">
+     <div class="mdui-list-item-content">
+     <div class="mdui-list-item-title"><a href="#" target="_blank"></a>苍之彼方的四重奏</a></div>
+    <div class="mdui-list-item-text mdui-list-item-one-line">今天| 2022-11-15 21:32:35</div>
+     </div>
+  </li>                    
+    <li class="mdui-list-item mdui-ripple">
+    <div class="mdui-list-item-content">
+    <div class="mdui-list-item-title"><a href="#" target="_blank"></a>恋爱与选举与巧克力</a></div>
+    <div class="mdui-list-item-text mdui-list-item-one-line">今天| 2022-11-16 21:32:35</div>
+    </div>
+</li>  
+</ul></div>
+            </div>
+        </div>
+    </div>
+    <div style="Height:20px"></div>
+
+<div class="mdui-container" style="max-width: 800px;">
+    <div class="mdui-card" style="border-radius: 16px;opacity: 0.7;">
+        <div class="mdui-card-menu"></div>
+        <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title">
+                浏览记录 | 我的浏览记录
+            </div>
+            <div class="mdui-card-primary-subtitle">
+                Browsing History | My Browse records
+            </div>
+        </div>
+        <div class="mdui-card-content">
+            <li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons"></i>
+
+                <div class="mdui-list-item-content">
+                    <a href="#" target="_blank">恋爱与选举与巧克力</a>
+                </div>
+            </li>
+            <li class="mdui-list-item mdui-ripple"> <i class="mdui-list-item-icon mdui-icon material-icons"></i>
+
+                <div class="mdui-list-item-content">
+                    <a href="#" target="_blank"> 我的青春恋爱物语果然有问题</a>
+                </div>
+            </li>
+        </div>
+    </div>
+</div>
+
+
+<div style="Height:20px"></div>
+ <div class="mdui-container" style="max-width: 800px;">
+    <div class="mdui-card" style="border-radius: 16px;">
+        <div class="mdui-card-content">
+            
+        <center style="color:#a7a7f1;">
+            都 2022 年了 But 还是没有女朋友
+            <br>
+            闺蜜说我是
+            <br>
+            <a style="color:pink;text-decoration:none;" 
+            href="//baike.baidu.com/item/%E5%A6%87%E5%A5%B3%E4%B9%8B%E5%8F%8B/16549616?fr=aladdin">“妇女之友”</a>
+            
+        </center>
+        </div>
+        
+        
+    </div>
+</div>
+
+ 
+ <div style="Height:20px"></div>
+ <div class="mdui-container" style="max-width: 800px;">
+    <div class="mdui-card" style="border-radius: 16px;">
+        
+        <footer>
+        <div class="mdui-card-content">
+            
+        <center style="color:#a7a7f1;">Copyright © right by  
+        <a style="color:#a7a7f1;text-decoration:none;" href="index.html">灰渡</a> All Rights Reserved.
+        </center>
+        
+        <center><a style="color:pink;text-decoration:none;" href="https://beian.miit.gov.cn/" target="_blank"
+            >鲁ICP备20221115号</a></center>
+
+        </div>
+        </footer>
+        
+    </div>
+</div>
+ 
+
+</body>
+</html>

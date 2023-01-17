@@ -1,0 +1,80 @@
+<!-- 登录页面 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Picture/touxiang.jpg">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="css/denglu.css">
+</head>
+
+<body>
+    <!-- 进入页面后自动播放音频 -->
+    <div class="audio"><audio id="music1" autoplay="autoplay" preload id="music1"> 
+        <source src="music/2.mp3">
+      </audio>
+      <!-- 登录板块主体 -->
+    <div class="container">
+        <!-- 移动板块 -->
+        <div class="form">
+            <div class="register hidden">
+                <h1>register</h1>
+                <button>注册</button>
+            </div>
+            <div class="login">
+                <h1>login</h1>
+                <input type="password" name="" placeholder="密钥" id="pwd">
+                <button id="into">登录</button>
+            </div>
+        </div>
+        <!-- 左侧板块 -->
+        <div class="con-box left">
+            <h2>欢迎来到<span>灰渡の主页！</span></h2>
+            <p>请联系<span>灰渡</span>获取密码</p>
+            <p><strong>QQ:249338320</strong></p>
+            <img src="images/denglu.jpg" alt="">
+            <p>已经从灰渡那获取了密钥？</p>
+            <button id="login">去登录</button>
+        </div>
+        <!-- 右侧板块 -->
+        <div class="con-box right">
+            <h2>欢迎来到<span>灰渡の主页！</span></h2>
+            <p>看看这人最近在搞什么<span>飞机</span></p>
+            <img src="images/denglu.jpg" alt="">
+            <p>还没有从灰渡那获取密钥？</p>
+            <button id="register">去获取</button>
+        </div>
+    </div>
+    <div class="panel-cover--overlay"></div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        // js实现板块的滑动效果
+        let login=document.getElementById('login');
+        let register=document.getElementById('register');
+        let form=document.getElementsByClassName('form')[0];
+        let register_box=document.getElementsByClassName('register')[0];
+        let login_box=document.getElementsByClassName('login')[0];
+
+        login.addEventListener('click',()=>{
+            form.style.transform='translateX(-5%)';
+        })
+        register.addEventListener('click',()=>{
+            form.style.transform='translateX(80%)';
+        })
+
+        // jQuery实现表单验证
+        $("#into").click(function(){
+              if($("#pwd").val() != 'huiduw'){
+                    alert("密钥错误！！");
+                }
+                else{
+                    location='index.html';//成功跳转到主页
+                    alert("欢迎来到灰渡的个人主页");
+                }
+            return false; 
+        })
+    </script>
+</body>
+</html>
